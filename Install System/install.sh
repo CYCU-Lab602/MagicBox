@@ -94,7 +94,7 @@ rm "Cudnn"$cudnnVersion"_cuda"$version""
 rm ""$cudnnVersion"+cuda"$version".deb"
 rm "dev_"$cudnnVersion"+cuda"$version".deb"
 rm "doc_"$cudnnVersion"+cuda"$version".deb"
-rm "cuda-repo*"
+rm cuda-repo*
 
 #********************************************************
 #*********************install opencv*********************
@@ -110,6 +110,8 @@ wget -O opencv_${openVersion}.zip https://github.com/opencv/opencv/archive/${ope
 wget -O opencv_contrib_3.4.7.zip https://github.com/opencv/opencv_contrib/archive/${openVersion}.zip
 unzip opencv_${openVersion}.zip
 unzip opencv_contrib_${openVersion}.zip
+rm opencv_${openVersion}.zip
+rm opencv_contrib_${openVersion}.zip
 cd opencv-${openVersion}
 mkdir build
 cd build
@@ -123,4 +125,5 @@ echo "export PKG_CONFIG_PATH" | sudo tee -a /etc/bash.bashrc
 source /etc/bash.bashrc
 pkg-config opencv --modversion
 cd ~
+reboot
 
