@@ -107,7 +107,7 @@ apt-get install -y python3.5-dev python3-numpy libtbb2 libtbb-dev
 apt-get install -y libjpeg-dev libpng-dev libtiff5-dev libjasper-dev libdc1394-22-dev libeigen3-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev sphinx-common libtbb-dev yasm libfaac-dev
 apt-get install -y libopencore-amrnb-dev libopencore-amrwb-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libavutil-dev libavfilter-dev libavresample-dev
 wget -O opencv_${openVersion}.zip https://github.com/opencv/opencv/archive/${openVersion}.zip
-wget -O opencv_contrib_3.4.7.zip https://github.com/opencv/opencv_contrib/archive/${openVersion}.zip
+wget -O opencv_contrib_${openVersion}.zip https://github.com/opencv/opencv_contrib/archive/${openVersion}.zip
 unzip opencv_${openVersion}.zip
 unzip opencv_contrib_${openVersion}.zip
 rm opencv_${openVersion}.zip
